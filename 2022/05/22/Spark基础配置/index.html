@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2022/05/28/spark基础配置/"/>
+  <link rel="canonical" href="http://example.com/2022/05/22/spark基础配置/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -37,13 +37,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark基础配置">
-<meta property="og:url" content="http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:url" content="http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.虚拟机分配123node1：192.168.88.151node2：192.168.88.152node3：192.168.88.153  开启虚拟机，连接FinalShell输入以下命令查看主机主机名、host映射、防火墙状态 1cd &#x2F;etc&#x2F;hostname  1cd &#x2F;etc&#x2F;hosts  1systemctl status firewalld.service  2.安装JDK（1）上">
+<meta property="og:description" content="一．基础环境  导入三台虚拟机，三台虚拟机信息汇总。     主机名 Node1.itcast.cn Node2.itcast.cn Node3.itcast.cn    IP 192.168.88.151 192.168.88.152 192.168.88.153   用户名、密码 root&#x2F;123456 root&#x2F;123456 root&#x2F;123456    集群角色规划     服务器 运行角">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-28T07:08:37.447Z">
-<meta property="article:modified_time" content="2022-05-28T06:59:07.027Z">
+<meta property="article:published_time" content="2022-05-22T08:11:29.000Z">
+<meta property="article:modified_time" content="2022-05-28T09:06:47.393Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1750,7 +1750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.fda82528.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.466f0d46.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653727650363),
+    lastupdate: new Date(1653729362266),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2521,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2563,10 +2563,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-28T15:08:37+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-22T16:11:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 28, 2022</p>
+    <p>发布于：May 22, 2022</p>
   </a>
 </div>
 
@@ -2587,144 +2587,152 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="1-虚拟机分配"><a href="#1-虚拟机分配" class="headerlink" title="1.虚拟机分配"></a>1.虚拟机分配</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node1：192.168.88.151</span><br><span class="line">node2：192.168.88.152</span><br><span class="line">node3：192.168.88.153</span><br></pre></td></tr></table></figure>
+    <p>一．基础环境</p>
+<ol>
+<li>导入三台虚拟机，三台虚拟机信息汇总。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">主机名</th>
+<th>Node1.itcast.cn</th>
+<th>Node2.itcast.cn</th>
+<th>Node3.itcast.cn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IP</td>
+<td>192.168.88.151</td>
+<td>192.168.88.152</td>
+<td>192.168.88.153</td>
+</tr>
+<tr>
+<td align="center">用户名、密码</td>
+<td>root/123456</td>
+<td>root/123456</td>
+<td>root/123456</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>集群角色规划</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>服务器</th>
+<th>运行角色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Node1.itcast.cn</td>
+<td>Namenode(主角色)，Datanode(从角色)，Resourcemanager(主角色)Nodemanager(从角色)，master，follower，worker，QuorumPeerMain,sparksubmit</td>
+</tr>
+<tr>
+<td>Node2.itcast.cn</td>
+<td>Secondarynamenode(主角色辅助角色)，datanode(从角色)Nodemanager(从角色)，worker，leader</td>
+</tr>
+<tr>
+<td>Node3.itcast.cn</td>
+<td>Datanode(从角色)，nodemanager(从角色)，worker，follower</td>
+</tr>
+</tbody></table>
+<p>（1）主机hosts映射</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%871.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%871.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（2）关闭防火墙</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%872.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%872.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（3）同步时间：ntpdate ntp5.aliyun.com</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%873.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%873.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（4）配置ssh</p>
+<p>免密登录node1、2、3</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%874.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%874.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%875.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%875.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%876.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%876.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>二、安装并配置JDK  </p>
+<p>（1）编译环境软件安装目录 </p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%877.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%877.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（2）上传 jdk-8u171-linux-x64.tar.gz到/export/softwares/目录下 </p>
+<p>安装JDK</p>
+<p>解压文件至/export/servers/</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%878.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%878.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>JDK安装目录重命名为jdk</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%879.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%879.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（3）配置环境变量 </p>
+<p>重新加载环境变量文件</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8710.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8710.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8711.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8711.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（4）JDK环境验证</p>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8712.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8712.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>（5）分发JDK相关文件到node2、3</p>
+<p>1.jdk相关文件分发</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r /export/servers/jdk1.8.0_171/ root@slave1:/export/servers/ </span><br><span class="line"></span><br><span class="line">scp -r /export/servers/jdk1.8.0_171/ root@slave2:/export/servers/</span><br></pre></td></tr></table></figure>
 
-<p>开启虚拟机，连接FinalShell输入以下命令查看主机主机名、host映射、防火墙状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/hostname</span><br></pre></td></tr></table></figure>
+<p>2.分发系统环境变量文件至slave1,slave2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r /etc/profile root@slave1:/etc/profile </span><br><span class="line"></span><br><span class="line">scp -r /etc/profile root@slave2:/etc/profile </span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/hosts</span><br></pre></td></tr></table></figure>
+<p>3.分别在slave1、slave2上执行source /etc/profile使环境变量生效</p>
+<p>三、Hadoop集群的安装和配置</p>
+<p>1.把 hadoop-3.3.0-Centos7-64-with-snappy.tar.gz 上传到 /export/server 并解压文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf hadoop-3.3.0-Centos7-64-with-snappy.tar.gz</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld.service</span><br></pre></td></tr></table></figure>
+<p>2.修改配置文件(进入路径 /export/server/hadoop-3.3.0/etc/hadoop)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/hadoop-3.3.0/etc/hadoop</span><br></pre></td></tr></table></figure>
 
-</div><div class="story post-story"><h2 id="2-安装JDK"><a href="#2-安装JDK" class="headerlink" title="2.安装JDK"></a>2.安装JDK</h2><p>（1）上传JDK压缩包到export/server/路径下</p>
-<p>（2）解压安装包 tar zxvf jdk-8u65-linux-x64.tar.gz</p>
-<p>建立软连接</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/jdk-8u65-linux-x64/ /export/server/jdk</span><br></pre></td></tr></table></figure>
+<p>3.hadoop-env.sh</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#文件最后添加</span><br><span class="line">export JAVA_HOME=/export/server/jdk1.8.0_241</span><br><span class="line"></span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root </span><br></pre></td></tr></table></figure>
 
-<p>（3）配置环境变量 vim /etc/export 添加以下内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/export/server/jdk1.8.0_24</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib</span><br></pre></td></tr></table></figure>
+<p>4.core-site.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置默认使用的文件系统 Hadoop支持file、HDFS、GFS、ali|Amazon云等文件系统 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;hdfs://master:8020&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置Hadoop本地保存数据路径 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;/export/data/hadoop-3.3.0&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置HDFS web UI用户身份 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 整合hive 用户代理设置 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.proxyuser.root.hosts&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.proxyuser.root.groups&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文件系统垃圾桶保存时间 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;fs.trash.interval&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;1440&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 
-<p>（4）source /etc/profile 使环境变量生效</p>
-<p>（5）向node2、node3分发JDK</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /export/server/jdk1.8.0_241/ root@node2:/export/server/</span><br><span class="line">scp -r /export/server/jdk1.8.0_241/ root@node3:/export/server/</span><br></pre></td></tr></table></figure>
+<p>4.hdfs-site.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置SNN进程运行机器位置信息 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;slave1:9868&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 
-<p>（6）向node2、node3复制环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile root@node2:/etc/</span><br><span class="line">scp /etc/profile root@node3:/etc/</span><br></pre></td></tr></table></figure>
+<p>5.mapred-site.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置MR程序默认运行模式： yarn集群模式 local本地模式 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- MR程序历史服务地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;master:10020&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"> </span><br><span class="line">&lt;!-- MR程序历史服务器web端地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;master:19888&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.map.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 
-<p>（7）source /etc/profile 使环境变量生效</p>
-<p>（8）分别在三台虚拟机执行以下命令检验安装是否成功</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java  -version </span><br></pre></td></tr></table></figure>
+<p>6.yarn-site.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置YARN集群主角色运行机器位置 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 是否将对容器实施物理内存限制 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.pmem-check-enabled&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;false&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 是否将对容器实施虚拟内存限制。 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;false&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 开启日志聚集 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置yarn历史服务器地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.log.server.url&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;http://master:19888/jobhistory/logs&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 历史日志保存的时间 7天 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;604800&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Java(TM) SE Runtime Environment (build 1.8.0_241-b07)</p>
-<p>Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)</p>
-</div><div class="story post-story"><h2 id="3-安装配置Hadoop集群"><a href="#3-安装配置Hadoop集群" class="headerlink" title="3.安装配置Hadoop集群"></a>3.安装配置Hadoop集群</h2><p>(1) 集群角色规划</p>
-<p>node1:namenode datanode resourcemanager nodemanager</p>
-<p>node2: secondarynamenode datanode nodemanager</p>
-<p>node3: datanode nodemanager</p>
-<p>(2) 服务器基础环境准备</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/hostname</span><br></pre></td></tr></table></figure>
+<p>7.workers</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
 
-<p>Host映射</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.88.151 node1</span><br><span class="line">192.168.88.152 node2</span><br><span class="line">192.168.88.153 node3</span><br></pre></td></tr></table></figure>
+<p>8.分发同步hadoop安装包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server</span><br><span class="line"></span><br><span class="line">scp -r hadoop-3.3.0 root@slave1:$PWD</span><br><span class="line">scp -r hadoop-3.3.0 root@slave2:$PWD</span><br></pre></td></tr></table></figure>
 
-<p>(3) 关闭防火墙（3台机器）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service #关闭防火墙</span><br><span class="line">systemctl disable firewalld.service #禁止防火墙自动开启</span><br></pre></td></tr></table></figure>
+<p>9.将hadoop添加到环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/export/server/hadoop-3.3.0</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
 
-<p>配置SSH免密登陆</p>
-<p>node1生成公钥私钥 (一路回车)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+<p>10.重新加载环境变量文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
 
-<p>配置免密登录到node1 node2 node3</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id node1</span><br><span class="line">ssh-copy-id node2</span><br><span class="line">ssh-copy-id node3</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Hadoop集群启动</strong></p>
+<ul>
+<li><p>格式化namenode（只有首次启动需要格式化）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>（1）脚本一键启动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# start-dfs.sh </span><br><span class="line">Starting namenodes on [master]</span><br><span class="line">上一次登录：五 3月 11 21:27:24 CST 2022pts/0 上</span><br><span class="line">Starting datanodes</span><br><span class="line">上一次登录：五 3月 11 21:27:32 CST 2022pts/0 上</span><br><span class="line">Starting secondary namenodes [slave1]</span><br><span class="line">上一次登录：五 3月 11 21:27:35 CST 2022pts/0 上</span><br><span class="line"></span><br><span class="line">[root@master ~]# start-yarn.sh </span><br><span class="line">Starting resourcemanager</span><br><span class="line">上一次登录：五 3月 11 21:27:41 CST 2022pts/0 上</span><br><span class="line">Starting nodemanagers</span><br><span class="line">上一次登录：五 3月 11 21:27:51 CST 2022pts/0 上</span><br></pre></td></tr></table></figure>
 
-<p>(4) 上传hadoop压缩包到export/server/路径下</p>
-<p>解压</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf hadoop-3.3.0-Centos7-64-with-snappy.tar.gz</span><br></pre></td></tr></table></figure>
+<p>（2）启动后，输入jps查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# jps</span><br><span class="line">127729 NameNode</span><br><span class="line">127937 DataNode</span><br><span class="line">14105 Jps</span><br><span class="line">128812 NodeManager</span><br><span class="line">128591 ResourceManager</span><br><span class="line"></span><br><span class="line">[root@slave1 hadoop]# jps</span><br><span class="line">121889 NodeManager</span><br><span class="line">121559 SecondaryNameNode</span><br><span class="line">7014 Jps</span><br><span class="line">121369 DataNode</span><br><span class="line"></span><br><span class="line">[root@slave2 hadoop]# jps</span><br><span class="line">6673 Jps</span><br><span class="line">121543 NodeManager</span><br><span class="line">121098 DataNode</span><br></pre></td></tr></table></figure>
 
-<p>建立软链接</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/ hadoop-3.3.0-Centos7-64 /export/server/hadoop</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>WEB页面</p>
+</li>
+<li><p>HDFS集群</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://master:9870/</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8713.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8713.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li>YARN集群</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://master:8088/</span><br></pre></td></tr></table></figure>
 
-<p>(5) 修改配置文件hadoop-env.sh（配置文件路径 hadoop-3.3.0/etc/hadoop）</p>
-<p>添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/export/server/jdk1.8.0_241</span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">export YARN_NODEMANAGER_USER=root </span><br></pre></td></tr></table></figure>
-
-<p>(6) 修改配置文件core-site.xml</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-- 设置默认使用的文件系统 Hadoop支持file、HDFS、GFS、ali|Amazon云等文件系统 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://node1:8020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 设置Hadoop本地保存数据路径 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/export/data/hadoop-3.3.0&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">     &lt;!-- 设置HDFS web UI用户身份 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">     &lt;!-- 整合hive 用户代理设置 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.proxyuser.root.hosts&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.proxyuser.root.groups&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 文件系统垃圾桶保存时间 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.trash.interval&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;1440&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(7) 修改配置文件hdfs-site.xml</p>
-<p>添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-- 设置SNN进程运行机器位置信息 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;node2:9868&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(8) 修改配置文件 mapred-site.xml</p>
-<p>添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置MR程序默认运行模式： yarn集群模式 local本地模式 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">     &lt;!-- MR程序历史服务地址 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">    &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;node1:10020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">     </span><br><span class="line">    &lt;!-- MR程序历史服务器web端地址 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;node1:19888&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.map.env&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(9) 修改配置文件yarn-site.xml</p>
-<p>添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设置YARN集群主角色运行机器位置 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">    	&lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">    	&lt;value&gt;node1&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!-- 是否将对容器实施物理内存限制 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.pmem-check-enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;false&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 是否将对容器实施虚拟内存限制。 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;false&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 开启日志聚集 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 设置yarn历史服务器地址 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.log.server.url&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;http://node1:19888/jobhistory/logs&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 历史日志保存的时间 7天 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">      &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;604800&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<p>(10) 修改配置文件workers</p>
-<p>添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node1.itcast.cn</span><br><span class="line">node2.itcast.cn</span><br><span class="line">node3.itcast.cn</span><br></pre></td></tr></table></figure>
-
-<p>(11) 分发同步hadoop安装包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r hadoop-3.3.0 root@node2:$PWD</span><br><span class="line">scp -r hadoop-3.3.0 root@node3:$PWD</span><br></pre></td></tr></table></figure>
-
-<p>(12) 将hadoop添加到环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line">export HADOOP_HOME=/export/server/hadoop-3.3.0</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
-
-<p>(13) 向node2、node3复制环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile root@node2:/etc/</span><br><span class="line">scp /etc/profile root@node3:/etc/</span><br><span class="line">source /etc/profile #使环境变量生效</span><br></pre></td></tr></table></figure>
-
-<p>(14) Hadoop集群启动</p>
-<p>（==首次启动==）格式化namenode</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br></pre></td></tr></table></figure>
-
-<p>脚本一键启动：start-dfs.sh 、start-yarn.sh </p>
-<p>(15) 访问WEB UI页面验证是否配置成功</p>
-<p>HDFS集群：<a target="_blank" rel="noopener" href="http://node1:9870/">http://node1:9870/</a></p>
-<p>YARN集群：<a target="_blank" rel="noopener" href="http://node1:8088/">http://node1:8088/</a></p>
-</div><div class="story post-story"><h2 id="4-zookeeper集群配置"><a href="#4-zookeeper集群配置" class="headerlink" title="4.zookeeper集群配置"></a>4.zookeeper集群配置</h2><p>(1) 基本规划</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node1：192.168.88.151  1</span><br><span class="line">node2：192.168.88.152  2</span><br><span class="line">node3：192.168.88.153  3</span><br></pre></td></tr></table></figure>
-
-<p>(2) 上传zookeeper压缩包export/server/路径下</p>
-<p>解压</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper-3.4.6.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p>建立软连接</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/zookeeper-3.4.6 /export/server/zookeeper</span><br></pre></td></tr></table></figure>
-
-<p>(3) 修改配置文件zoo_sample.cfg </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp zoo_sample.cfg zoo.cfg</span><br><span class="line">mkdir -p /export/server/zookeeper/zkdatas/</span><br><span class="line">vim  zoo.cfg</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改以下内容：</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">Zookeeper的数据存放目录</span></span><br><span class="line">dataDir=/export/server/zookeeper/zkdatas</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保留多少个快照</span></span><br><span class="line">autopurge.snapRetainCount=3</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">日志多少小时清理一次</span></span><br><span class="line">autopurge.purgeInterval=1</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">集群中服务器地址</span></span><br><span class="line">server.1=node1:2888:3888</span><br><span class="line">server.2=node2:2888:3888</span><br><span class="line">server.3=node3:2888:3888</span><br></pre></td></tr></table></figure>
-
-<p>(4)添加myid配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /export/server/zookeeper/zkdatas/myid</span><br></pre></td></tr></table></figure>
-
-<p>(5) 分发安装包并修改myid值</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/</span><br><span class="line">scp -r /export/server/zookeeper-3.4.6/ node2:$PWD</span><br><span class="line">scp -r /export/server/zookeeper-3.4.6/ node3:$PWD</span><br></pre></td></tr></table></figure>
-
-<p>第二台机器上建立软连接, 并修改myid的值为2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/</span><br><span class="line">ln -s zookeeper-3.4.6/ zookeeper </span><br><span class="line">echo 2 &gt; /export/server/zookeeper/zkdatas/myid</span><br></pre></td></tr></table></figure>
-
-<p>第三台机器上建立软连接, 并修改myid的值为3</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/</span><br><span class="line">ln -s zookeeper-3.4.6/ zookeeper </span><br><span class="line">echo 3 &gt; /export/server/zookeeper/zkdatas/myid</span><br></pre></td></tr></table></figure>
-
-<p>(6) 配置环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile </span><br><span class="line">export ZOOKEEPER_HOME=/export/server/zookeeper</span><br><span class="line">export PATH=$PATH:$ZOOKEEPER_HOME/bin</span><br></pre></td></tr></table></figure>
-
-<p>(7) 向node2、node3复制环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile root@node2:/etc/</span><br><span class="line">scp /etc/profile root@node3:/etc/</span><br><span class="line">source /etc/profile #使环境变量生效</span><br></pre></td></tr></table></figure>
-
-<p>(8) 三台机器启动zookeeper服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/export/server/zookeeper/bin/zkServer.sh start</span><br><span class="line">/export/server/zookeeper/bin/zkServer.sh stop</span><br></pre></td></tr></table></figure>
-
-<p>(9) 查看服务状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/export/server/zookeeper/bin/zkServer.sh  </span><br><span class="line">status</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8714.png" class="lazyload" data-srcset="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/..%5Cimages%5C%E5%9B%BE%E7%89%8714.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 
 
-</div>
   </div>
   
   
@@ -2742,7 +2750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/>http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/>http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</a></p>
               
             
           </blockquote>
@@ -2759,7 +2767,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-28T14:59:07+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-28T17:06:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 28, 2022</p>
@@ -2781,7 +2789,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
           
           >
           
@@ -2793,7 +2801,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
           
           >
           
@@ -2805,7 +2813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=Spark基础配置 - Hexo&summary="
           
           >
           
@@ -2845,24 +2853,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2022/05/22/Spark%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE/'>
-          <p class='title'>Spark全流程配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>一．基础环境
-
-导入三台虚拟机，三台虚拟机信息汇总。
-
-
-
-
-主机名
-Node1.itcast.cn
-Node2.itcast.cn
-Node3.itcast.cn
-
-
-
-IP
-192.168....</p>
+        <a class='next' href='/2022/05/16/hello-world/'>
+          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
         </a>
       
     </div>
@@ -2878,7 +2871,7 @@ IP
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2901,19 +2894,9 @@ IP
 
 
 
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%86%E9%85%8D"><span class="toc-text">1.虚拟机分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85JDK"><span class="toc-text">2.安装JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEHadoop%E9%9B%86%E7%BE%A4"><span class="toc-text">3.安装配置Hadoop集群</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-zookeeper%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE"><span class="toc-text">4.zookeeper集群配置</span></a></li></ol>
-    </div>
-  </section>
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -3928,7 +3911,7 @@ IP
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is Bear-blog!!!"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/28/Spark基础配置/","name":"Spark基础配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is Bear-blog!!!","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is Bear-blog!!!"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spark基础配置","description":"This is Bear-blog!!!","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/05/28/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-28T07:08:37.447Z","dateModified":"2022-05-28T06:59:07.027Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is Bear-blog!!!"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/22/Spark基础配置/","name":"Spark基础配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is Bear-blog!!!","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is Bear-blog!!!"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spark基础配置","description":"This is Bear-blog!!!","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-22T08:11:29.000Z","dateModified":"2022-05-28T09:06:47.393Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
