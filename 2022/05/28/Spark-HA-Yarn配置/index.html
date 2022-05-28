@@ -31,19 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hexo</title>
+  <title>Spark-HA-Yarn配置 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="This is Bear-blog!!! - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Spark-HA-Yarn配置">
 <meta property="og:url" content="http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Spark-Standalone-HA模式Spark Standalone集群是Master-Slaves架构的集群模式,和大部分的Master-Slaves结构集群一样,存在着Master 单点故障(SPOF)的问题。简单理解为，spark-Standalone 模式下为 master 节点控制其他节点，当 master 节点出现故障时，集群就不可用了。 spark-Standalone-HA">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-28T13:01:33.550Z">
-<meta property="article:modified_time" content="2022-05-28T13:44:05.522Z">
+<meta property="article:published_time" content="2022-05-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-28T13:53:53.770Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1750,7 +1750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.fda82528.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.466f0d46.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653745509536),
+    lastupdate: new Date(1653746066568),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2541,16 +2541,53 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        Spark-HA-Yarn配置
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-28T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 28, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h5 id="Spark-Standalone-HA模式"><a href="#Spark-Standalone-HA模式" class="headerlink" title="Spark-Standalone-HA模式"></a><img src>Spark-Standalone-HA模式</h5><p>Spark Standalone集群是Master-Slaves架构的集群模式,和大部分的Master-Slaves结构集群一样,存在着Master 单点故障(SPOF)的问题。简单理解为，spark-Standalone 模式下为 master 节点控制其他节点，当 master 节点出现故障时，集群就不可用了。 spark-Standalone-HA 模式下 master 节点不固定，当一个宕机时，立即换另一台为 master 保障不出现故障。</p>
+    <h5 id="Spark-Standalone-HA模式"><a href="#Spark-Standalone-HA模式" class="headerlink" title="Spark-Standalone-HA模式"></a>Spark-Standalone-HA模式</h5><p>Spark Standalone集群是Master-Slaves架构的集群模式,和大部分的Master-Slaves结构集群一样,存在着Master 单点故障(SPOF)的问题。简单理解为，spark-Standalone 模式下为 master 节点控制其他节点，当 master 节点出现故障时，集群就不可用了。 spark-Standalone-HA 模式下 master 节点不固定，当一个宕机时，立即换另一台为 master 保障不出现故障。</p>
 <ul>
 <li><p>此处因为先前配置时的 zookeeper 版本和 spark 版本不太兼容，导致此模式有故障，需要重新下载配置新的版本的 zookeeper</p>
 </li>
@@ -2668,7 +2705,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-28T21:44:05+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-28T21:53:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 28, 2022</p>
@@ -2690,7 +2727,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title= - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title=Spark-HA-Yarn配置 - Hexo&summary="
           
           >
           
@@ -2702,7 +2739,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title= - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title=Spark-HA-Yarn配置 - Hexo&summary="
           
           >
           
@@ -2714,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title= - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/&title=Spark-HA-Yarn配置 - Hexo&summary="
           
           >
           
@@ -2747,10 +2784,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/2022/05/28/Spark-local-stand-alone%E9%85%8D%E7%BD%AE/'>
-          <p class='title'>Spark local& stand-alone配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2022/05/28/Spark-local-stand-alone%E9%85%8D%E7%BD%AE/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Spark local& stand-alone配置</p>
           <p class='content'>Spark安装配置Spark是专为大规模数据处理而设计的快速通用的计算引擎，其提供了一个全面、统一的框架用于管理各种不同性质的数据集和数据源的大数据处理的需求，大数据开发需掌握Spark基础、S...</p>
+        </a>
+      
+      
+        <a class='next' href='/2022/05/22/Spark%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/'>
+          <p class='title'>Spark基础配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一．基础环境
+
+导入三台虚拟机，三台虚拟机信息汇总。
+
+
+
+
+主机名
+Node1.itcast.cn
+Node2.itcast.cn
+Node3.itcast.cn
+
+
+
+IP
+192.168....</p>
         </a>
       
     </div>
@@ -2850,7 +2907,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3816,7 +3873,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://wjj-1.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/","sameAs":["https://github.com/volantis-x"],"description":"This is Bear-blog!!!"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://wjj-1.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn配置/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://wjj-1.github.io/","keywords":null,"description":"This is Bear-blog!!!","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/","description":"This is Bear-blog!!!"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://wjj-1.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://wjj-1.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"This is Bear-blog!!!","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-28T13:01:33.550Z","dateModified":"2022-05-28T13:44:05.522Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://wjj-1.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/","sameAs":["https://github.com/volantis-x"],"description":"This is Bear-blog!!!"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://wjj-1.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn配置/","name":"Spark-HA-Yarn配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://wjj-1.github.io/","keywords":null,"description":"This is Bear-blog!!!","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/","description":"This is Bear-blog!!!"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://wjj-1.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://wjj-1.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spark-HA-Yarn配置","description":"This is Bear-blog!!!","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://wjj-1.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://wjj-1.github.io/2022/05/28/Spark-HA-Yarn%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-27T16:00:00.000Z","dateModified":"2022-05-28T13:53:53.770Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
